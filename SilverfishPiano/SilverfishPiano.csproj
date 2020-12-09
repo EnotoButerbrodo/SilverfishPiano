@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\chhh.ico</ApplicationIcon>
+    <Description />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\%253F%253F%253F%253F%253F%253F%253F%253F%253F.png" />
+    <None Remove="Resources\chhh.ico" />
+    <None Remove="Resources\chhh.png" />
+    <None Remove="Resources\doki_doki_literature_club_ost_ohayou_sayori_-3991409475570679520 %28online-audio-converter.com%29.wav" />
+    <None Remove="Resources\maxresdefault.jpg" />
+    <None Remove="Resources\SilverfishDeath1.wav" />
+    <None Remove="Resources\SilverfishHurt1.oga" />
+    <None Remove="Resources\SilverfishHurt1.wav" />
+    <None Remove="Resources\SilverfishHurt2.oga" />
+    <None Remove="Resources\SilverfishHurt2.wav" />
+    <None Remove="Resources\SilverfishHurt3.oga" />
+    <None Remove="Resources\SilverfishHurt3.wav" />
+    <None Remove="Resources\SilverfishIdle1.oga" />
+    <None Remove="Resources\SilverfishIdle1.wav" />
+    <None Remove="Resources\SilverfishIdle2.oga" />
+    <None Remove="Resources\SilverfishIdle2.wav" />
+    <None Remove="Resources\SilverfishIdle3.oga" />
+    <None Remove="Resources\SilverfishIdle3.wav" />
+    <None Remove="Resources\SilverfishIdle4.oga" />
+    <None Remove="Resources\SilverfishIdle4.wav" />
+    <None Remove="Resources\Stone.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="1.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\chhh.ico" />
+    <Resource Include="Resources\chhh.png" />
+    <Resource Include="Resources\maxresdefault.jpg" />
+    <Resource Include="Resources\SilverfishDeath1.wav">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\SilverfishHurt1.wav" />
+    <Resource Include="Resources\SilverfishHurt2.wav" />
+    <Resource Include="Resources\SilverfishHurt3.wav" />
+    <Resource Include="Resources\SilverfishIdle1.wav" />
+    <Resource Include="Resources\SilverfishIdle2.wav" />
+    <Resource Include="Resources\SilverfishIdle3.wav" />
+    <Resource Include="Resources\SilverfishIdle4.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
