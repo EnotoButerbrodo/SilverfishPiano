@@ -26,11 +26,12 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Content="Синтезатор чешуйницы" Grid.ColumnSpan="5" FontSize="70" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,116,0,0" Grid.RowSpan="2" >
+        <Label Content="Синтезатор чешуйницы" Grid.Row="1" Grid.ColumnSpan="5" FontSize="70" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-1,0,0" VerticalAlignment="Stretch" >
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
+        <Image Grid.Column="1" Grid.Row="0" Panel.ZIndex="-1" Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Resources/chhh.png"/>
         <Image x:Name="ImageTest" Grid.Column="1" Grid.Row="1"/>
         <Button x:Name="One" Content="Пш" Grid.Column="0" Grid.Row="2" FontSize="28" FontFamily="Cambria Math" BorderBrush="{x:Null}" Foreground="White" Opacity="0.955" Click="SoundButton_Click" Margin="0,0,0,0">
             <Button.Background>
@@ -88,6 +89,6 @@
                 Minimum="0" Maximum="3000" TickPlacement="Both" TickFrequency="100" IsSelectionRangeEnabled="True" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged"/>
         <Slider x:Name="EightSlider" Grid.Column ="3" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Top"
                 Minimum="0" Maximum="3000" TickPlacement="Both" TickFrequency="100" IsSelectionRangeEnabled="True" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged"/>
-        <Button Content="Управление" Grid.Column="3" Margin="96,10,10,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button Content="Управление" Grid.Column="3" Margin="96,10,10,0" VerticalAlignment="Top" FontSize="16" Click="Button_Click"/>
     </Grid>
 </Window>

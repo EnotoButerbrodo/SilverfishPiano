@@ -32,10 +32,8 @@ namespace SilverfishPiano
         }
         DispatcherTimer[] timers = new DispatcherTimer[8];
         Timer[] timers2 = new Timer[8];
-        Dictionary<string, WaveOut> AudioPlayers = new Dictionary<string, WaveOut>();
-        async private void SoundButton_Click(object sender, EventArgs e)
+        private void SoundButton_Click(object sender, EventArgs e)
         {
-            //sp = new SoundPlayer();
             Stream stream = new MemoryStream();
             var button = sender as Button;
             switch (button.Name)
@@ -79,7 +77,6 @@ namespace SilverfishPiano
             WaveOut player = new WaveOut();
             player.Init(wavSong);
             player.Play();
-
         }
         //void StartPlayAudio(string name, bool loop)
         //{
@@ -195,6 +192,12 @@ namespace SilverfishPiano
                     ConfigTimer(7, Eight);
                     break;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Жми кливиши с Num0 до Num 8 или c A до K  чтобы извлечь звук. "+
+                            "Двигай ползунки чтобы задать бит. Чтобы отключить бит двигай ползунок в начальное положение", "Управление", MessageBoxButton.OK);
         }
     }
 }
